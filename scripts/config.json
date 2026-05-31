@@ -1,0 +1,232 @@
+{
+  "output_dir": "public/data",
+  "cache_dir": "scripts/cache",
+  "cache_days": 14,
+  "public_api_user_agent": "InfluenceTracingPapers/0.1 (TrustFed by Lucaz)",
+  "sources": {
+    "openalex": {
+      "enabled": true,
+      "per_page": 200,
+      "max_results_per_query": 1000,
+      "rate_limit_seconds": 0.15
+    },
+    "semantic_scholar": {
+      "enabled": true,
+      "per_page": 100,
+      "max_results_per_query": 500,
+      "rate_limit_seconds": 4.0
+    },
+    "arxiv": {
+      "enabled": true,
+      "per_page": 100,
+      "max_results_per_query": 300,
+      "rate_limit_seconds": 3.0
+    },
+    "dblp": {
+      "enabled": true,
+      "per_page": 100,
+      "max_results_per_query": 300,
+      "rate_limit_seconds": 0.5
+    },
+    "github": {
+      "enabled": true,
+      "enabled_without_token": false,
+      "max_code_searches_per_topic": 80,
+      "rate_limit_seconds": 2.0
+    }
+  },
+  "venue_bonus_terms": [
+    "neurips",
+    "nips",
+    "icml",
+    "iclr",
+    "aaai",
+    "ijcai",
+    "kdd",
+    "www",
+    "acl",
+    "emnlp",
+    "cvpr",
+    "iccv",
+    "eccv",
+    "aistats",
+    "jmlr",
+    "tmlr",
+    "uai",
+    "mlsys",
+    "usenix",
+    "sigmod",
+    "vldb",
+    "arxiv"
+  ],
+  "tag_terms": {
+    "influence_functions": ["influence function", "influence functions"],
+    "influence_tracing": ["influence tracing"],
+    "training_data_attribution": ["training data attribution", "example attribution", "data attribution"],
+    "data_valuation": ["data valuation", "data shapley", "shapley value"],
+    "data_shapley": ["data shapley", "shapley value"],
+    "tracin": ["tracin"],
+    "trak": ["trak"],
+    "datainf": ["datainf"],
+    "representer_points": ["representer point", "representer points"],
+    "memorization": ["memorization", "memorisation"],
+    "continual_learning": ["continual learning", "lifelong learning", "incremental learning"],
+    "federated_learning": ["federated learning", "federated", "distributed learning"],
+    "federated_continual_learning": ["federated continual learning", "continual federated learning", "federated lifelong learning"],
+    "federated_unlearning": ["federated unlearning"],
+    "rehearsal": ["rehearsal", "exemplar selection", "coreset"],
+    "client_contribution": ["client contribution", "client valuation", "client selection"]
+  },
+  "keyword_groups": {
+    "influence": [
+      "influence function",
+      "influence functions",
+      "influence tracing",
+      "training data attribution",
+      "data attribution",
+      "data influence",
+      "data valuation",
+      "data shapley",
+      "tracin",
+      "trak",
+      "datainf",
+      "representer point",
+      "representer points",
+      "example attribution"
+    ],
+    "continual": [
+      "continual learning",
+      "lifelong learning",
+      "incremental learning",
+      "class incremental",
+      "class-incremental",
+      "task incremental",
+      "task-incremental",
+      "catastrophic forgetting",
+      "forgetting",
+      "rehearsal",
+      "exemplar selection"
+    ],
+    "federated": [
+      "federated learning",
+      "federated",
+      "distributed learning",
+      "client contribution",
+      "client valuation",
+      "client selection",
+      "federated unlearning",
+      "personalized federated",
+      "personalised federated"
+    ],
+    "ml_context": [
+      "machine learning",
+      "deep learning",
+      "neural network",
+      "training data",
+      "training dataset",
+      "data attribution",
+      "model debugging",
+      "interpretability",
+      "explainability",
+      "artificial intelligence",
+      "predictive model",
+      "classification",
+      "learning algorithm",
+      "dataset"
+    ]
+  },
+  "negative_terms": [
+    "social influence",
+    "political influence",
+    "influencer",
+    "human influence",
+    "peer influence",
+    "influence maximization",
+    "celebrity",
+    "thermodynamics"
+  ],
+  "topics": {
+    "influence_tracing": {
+      "display_name": "Influence Tracing",
+      "csv_file": "papers_influence_tracing.csv",
+      "required_groups": ["influence"],
+      "threshold": 4,
+      "queries": [
+        "\"influence tracing\"",
+        "\"influence functions\" machine learning",
+        "\"training data attribution\"",
+        "\"data attribution\" machine learning",
+        "\"data influence\" deep learning",
+        "\"data valuation\" machine learning",
+        "\"data Shapley\" machine learning",
+        "\"TracIn\"",
+        "\"TRAK\" \"data attribution\"",
+        "\"DataInf\" \"influence\"",
+        "\"representer point selection\"",
+        "\"memorization\" \"training data attribution\"",
+        "\"model debugging\" \"influence functions\"",
+        "\"example attribution\" machine learning"
+      ]
+    },
+    "influence_tracing_continual_learning": {
+      "display_name": "Influence Tracing in Continual Learning",
+      "csv_file": "papers_influence_tracing_continual_learning.csv",
+      "required_groups": ["influence", "continual"],
+      "threshold": 6,
+      "queries": [
+        "\"influence tracing\" \"continual learning\"",
+        "\"influence functions\" \"continual learning\"",
+        "\"training data attribution\" \"continual learning\"",
+        "\"data attribution\" \"continual learning\"",
+        "\"data influence\" \"continual learning\"",
+        "\"data valuation\" \"continual learning\"",
+        "\"exemplar selection\" \"influence\" \"continual learning\"",
+        "\"rehearsal\" \"influence functions\" \"continual learning\"",
+        "\"catastrophic forgetting\" \"influence functions\"",
+        "\"lifelong learning\" \"data attribution\"",
+        "\"class incremental learning\" \"data attribution\"",
+        "\"task incremental learning\" \"influence functions\""
+      ]
+    },
+    "influence_tracing_federated_learning": {
+      "display_name": "Influence Tracing in Federated Learning",
+      "csv_file": "papers_influence_tracing_federated_learning.csv",
+      "required_groups": ["influence", "federated"],
+      "threshold": 6,
+      "queries": [
+        "\"influence tracing\" \"federated learning\"",
+        "\"influence functions\" \"federated learning\"",
+        "\"data attribution\" \"federated learning\"",
+        "\"training data attribution\" \"federated learning\"",
+        "\"data valuation\" \"federated learning\"",
+        "\"client contribution\" \"federated learning\" \"influence\"",
+        "\"client valuation\" \"federated learning\"",
+        "\"federated learning\" \"Shapley value\"",
+        "\"client selection\" \"influence functions\" \"federated learning\"",
+        "\"federated unlearning\" \"influence functions\"",
+        "\"personalized federated learning\" \"data attribution\"",
+        "\"federated learning\" \"data Shapley\""
+      ]
+    },
+    "influence_tracing_federated_continual_learning": {
+      "display_name": "Influence Tracing in Federated Continual Learning",
+      "csv_file": "papers_influence_tracing_federated_continual_learning.csv",
+      "required_groups": ["influence", "federated", "continual"],
+      "threshold": 8,
+      "queries": [
+        "\"influence tracing\" \"federated continual learning\"",
+        "\"influence functions\" \"federated continual learning\"",
+        "\"data attribution\" \"federated continual learning\"",
+        "\"data valuation\" \"federated continual learning\"",
+        "\"federated continual learning\" \"client contribution\"",
+        "\"federated continual learning\" \"catastrophic forgetting\"",
+        "\"federated lifelong learning\" \"influence\"",
+        "\"continual federated learning\" \"data valuation\"",
+        "\"federated learning\" \"continual learning\" \"influence functions\"",
+        "\"federated learning\" \"continual learning\" \"data attribution\"",
+        "\"federated continual learning\" \"client selection\"",
+        "\"federated continual learning\" \"rehearsal\""
+      ]
+    }
+  }
+}

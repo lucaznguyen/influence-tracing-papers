@@ -1,0 +1,17 @@
+node_modules/
+.next/
+out/
+tsconfig.tsbuildinfo
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+scripts/cache/
+data/cache/
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
