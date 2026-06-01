@@ -2,7 +2,7 @@ name: Update Paper Data
 
 on:
   schedule:
-    - cron: "0 3 * * 1"
+    - cron: "0 3 * * *"
   workflow_dispatch:
 
 permissions:
@@ -51,7 +51,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "Update paper metadata"
           title: "Update paper metadata"
-          body: "Automated weekly metadata refresh for Influence Tracing Research Papers."
+          body: "Automated daily metadata refresh for Influence Tracing Research Papers."
           branch: automated/update-paper-data
           delete-branch: true
           add-paths: |

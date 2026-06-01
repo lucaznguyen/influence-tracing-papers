@@ -8,7 +8,7 @@ Influence Tracing Research Papers is a static research paper browser for **Trust
 - Ranking views for top ranked, most relevant, recent, most cited, foundational papers, papers with code, and topic tags.
 - Python crawler that collects metadata from public APIs and writes CSV files to `public/data/`.
 - GitHub Pages static export through Next.js.
-- Weekly GitHub Actions data refresh with a pull request when CSV files change.
+- Daily GitHub Actions data refresh with a pull request when CSV files change.
 
 ## Topics
 
@@ -112,7 +112,7 @@ https://<username>.github.io/influence-tracing-papers/
 
 ## Scheduled Updates
 
-`.github/workflows/update-papers.yml` runs every Monday at 03:00 UTC and can also be started with `workflow_dispatch`. It:
+`.github/workflows/update-papers.yml` runs daily at 03:00 UTC and can also be started with `workflow_dispatch`. It:
 
 1. Installs Python dependencies.
 2. Runs `python scripts/crawl_papers.py --all`.
